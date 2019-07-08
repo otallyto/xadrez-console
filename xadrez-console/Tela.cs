@@ -15,6 +15,10 @@ namespace xadrez_console
             Console.WriteLine();
             Console.WriteLine("Turno: " + partida.Turno);
             Console.WriteLine("Aguardando jogada: " + partida.JogadorAtual);
+            if (partida.xeque)
+            {
+                Console.WriteLine("XEQUE!");
+            }
         }
 
         public static void imprimirPecasCapturadas(PartidaXadrez partida)
@@ -30,7 +34,7 @@ namespace xadrez_console
             Console.ForegroundColor = aux;
         }
 
-        public static void imprimirConjunto (HashSet<Peca> conjunto)
+        public static void imprimirConjunto(HashSet<Peca> conjunto)
         {
             Console.Write("[");
             foreach (Peca x in conjunto)
@@ -42,9 +46,6 @@ namespace xadrez_console
 
         public static void ImprimirTabuleiro(Tabuleiro tab)
         {
-
-
-
             for (int i = 0; i < tab.Linhas; i++)
             {
 
@@ -52,13 +53,10 @@ namespace xadrez_console
 
                 for (int j = 0; j < tab.Colunas; j++)
                 {
-
                     ImprimirPeca(tab.Peca(i, j));
-
                 }
 
                 Console.WriteLine();
-
             }
 
             Console.WriteLine("  a b c d e f g h");
@@ -104,9 +102,6 @@ namespace xadrez_console
 
         public static void ImprimirPeca(Peca peca)
         {
-
-
-
             if (peca == null)
             {
 

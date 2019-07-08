@@ -29,6 +29,6 @@ namespace tabuleiro
             Linha = linha;
             Coluna = coluna;
         }
-       
+
     }
 }

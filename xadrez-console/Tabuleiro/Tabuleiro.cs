@@ -43,7 +43,7 @@ namespace tabuleiro
 
         public Peca RetirarPeca(Posicao pos)
         {
-            if(Peca(pos) == null)
+            if (Peca(pos) == null)
             {
                 return null;
             }

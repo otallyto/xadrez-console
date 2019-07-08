@@ -24,15 +24,21 @@ namespace tabuleiro
             QteMovimentos++;
         }
 
+
+        public void DecrementarQteMovimentos()
+        {
+            QteMovimentos--;
+        }
         public abstract bool[,] MovimentosPossiveis();
 
-        public bool existeMovimentosPossiveis() {
+        public bool existeMovimentosPossiveis()
+        {
 
             bool[,] mat = MovimentosPossiveis();
 
-            for(int i = 0; i < Tab.Linhas; i++)
+            for (int i = 0; i < Tab.Linhas; i++)
             {
-                for (int j = 0; j <Tab.Colunas; j++)
+                for (int j = 0; j < Tab.Colunas; j++)
                 {
                     if (mat[i, j])
                     {
